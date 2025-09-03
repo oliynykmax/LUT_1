@@ -1,0 +1,45 @@
+
+% Hello world
+disp('Hello world!')
+%% Exercise Set 1
+% Exercise 1
+clearvars
+close all
+clc
+
+sine = sin(pi/2)
+cosine = cos(3*pi)
+
+sin(pi)
+% here we get 1.2246e-16 due to the matlab arhitechture, instead of giving 0 it gives very small number
+% it's just unavoidable cost of using floating point numbers, that's why when we gonna compare
+% that number to something, we will use some epsilon for comparison
+
+%% Exercise Set 1
+% Exercise 2
+clearvars
+close all
+clc
+
+t2i = (23.4 * 2 ^ 2 - 238) / (9^2 + 34.2)
+t2ii = (8/9) ^ 3 * 32 - (3 ^ 6 / (7^7 - 555))
+t2iii = 4 * sqrt(2200) - 45
+t2iv = sqrt(4 ^ 5) + log(exp(-5))
+t2v = sin(pi) - abs(cos(pi) / 2)
+t2vi = (23 + exp(-2)) / (exp(4) + log(1023))
+t2vii = (tan(pi/6 * log(8)))/(sqrt(17) + 2)
+t2viii = nthroot(-8, 3) + nthroot(6103515625, 7)
+t2ix = cos(5 * pi / 6) * (sin(8 * pi / 7))^2
+
+%% Exercise Set 1
+% Exercise 4
+clearvars
+close all
+clc
+
+credits_mb = 3
+weeks = 8
+hours_in_credit = 1600 / 60
+hours_of_work = credits_mb *  hours_in_credit
+h_per_week = hours_of_work / 8
+
