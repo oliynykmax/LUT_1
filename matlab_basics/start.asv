@@ -45,41 +45,6 @@ h_per_week = hours_of_work / 8;
 
 %% Exercise Set 1
 % Exercise 5
-clearvars
-close all
-clc
 syms x;
-f(x) = x^2;
-f(2);
-%plot 
-fplot(f(x))
-title("omitted")
-fplot(f(x), [-15, 45])
-title("-15 45")
-% the extra vector argument is providing the limits for x axis, so the plot
-% is not drown outside of that aread, if it's 2, 2 nothing is shown
-% if it is ommited, it picks some size (-5, 5), which is matlab default
-
-clearvars
-close all
-clc
-
-syms x
-f(x) = x^2;
-g(x) = 1 + 0*x;
-
-figure
-
-fplot(f, [-3, 3], 'LineWidth', 2)
-hold on
-
-fplot(g, [-3, 3], '--r', 'LineWidth', 2)
-
-title('Graphical Solution of x^2 = 1')
-xlabel('x')
-ylabel('y')
-legend('f(x) = x^2', 'y = 1', 'Location', 'northwest')
-grid on
-
-
+f = x^2;
 
