@@ -51,15 +51,15 @@ clc
 syms x;
 f(x) = x^2;
 f(2);
-%plot 
+%% plot1 
 fplot(f(x))
-title("omitted")
+%% plot2
 fplot(f(x), [-15, 45])
 title("-15 45")
 % the extra vector argument is providing the limits for x axis, so the plot
 % is not drown outside of that aread, if it's 2, 2 nothing is shown
 % if it is ommited, it picks some size (-5, 5), which is matlab default
-
+%% c)
 clearvars
 close all
 clc
@@ -80,6 +80,68 @@ xlabel('x')
 ylabel('y')
 legend('f(x) = x^2', 'y = 1', 'Location', 'northwest')
 grid on
+%% Exercise Set 1
+% Exercise 5
+clearvars
+close all
+clc
+% 2 = 2
+% in programming == should be used, === in some other languages like js
+result1 = 2 == 2 % 1 - true
+result2 = 2 == 3 % 0 - false
+%% examples of solve
+syms x y z
+eq1 = x + y == 5;
+eq2 = x - y == 1;
+s1 = solve(eq1, x)
+s2 = solve(eq1, y)
+pretty(s1)
+pretty(s2)
+
+
+%% another example
+syms u v
+% Define system of equations
+eqns = [2*u + v == 0, u - v == 1];
+% Solve for u and v
+S = solve(eqns, [u v]);
+pretty(S.u)
+pretty(S.v)
+%% x^2 == 1 solved
+clearvars
+close all
+clc
+syms x 
+S = solve(x^2 == 1, x)
+pretty(S)
+%% |x − 5| = |x|+1
+syms x real
+eq = abs(x - 5) == abs(x) + 1;
+S_abs = solve(eq, x);
+pretty(S_abs);
+%% but I wanna look at the issue
+syms x
+eq = abs(x - 5) == abs(x) + 1;
+S_abs = solve(eq, x);
+pretty(S_abs);
+% solved it anyway but gave the warning, solved using vpasolve
+% as I read the diff between vpasolve and solve is that first one always
+% returns number, not expression, and solve does it only in simple cases
+% when the answer is a rational number
+
+%% bonus
+clearvars
+close all
+clc
+%% x2 > 1 and |x − 5| > |x| + 1
+syms x real
+sol = solve(x^2 > 1, x, 'ReturnConditions', true);
+disp("inequality 1 solution:")
+pretty(sol.conditions)
+sol2 = solve(abs(x - 5) > abs(x) + 1, x, 'ReturnConditions', true);
+disp("inequality 2 solution:")
+pretty(sol2.conditions)
+
 
 
 
