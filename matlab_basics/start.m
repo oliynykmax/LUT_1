@@ -142,6 +142,9 @@ sol2 = solve(abs(x - 5) > abs(x) + 1, x, 'ReturnConditions', true);
 disp("inequality 2 solution:")
 pretty(sol2.conditions)
 
-
-
-
+%% a) https://www.wolframalpha.com/input?i=abs%28x+-5%29+%3E+abs%28x%29+%2B+1
+%% b) https://www.wolframalpha.com/input?i2d=true&i=Sum%5B3n%2C%7Bn%2C1%2C6%7D%5D
+%% c) https://www.wolframalpha.com/input?i=f+%3D+x%5E2+%2B+sin%28x%29
+%% d) https://www.wolframalpha.com/input?i2d=true&i=y+%3D+x+%2B+1%3B+y+%3D+-x+%2B+3%3B
+%% or https://www.wolframalpha.com/input?i2d=true&i=solve+y+%3D+x+%2B+1%5C%2844%29+y+%3D+-x+%2B+3%0A
+%% 
