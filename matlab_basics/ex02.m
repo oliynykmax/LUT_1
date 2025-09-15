@@ -7,7 +7,8 @@ clc
 syms x
 f(x) = 1 / (x ^ 2 + 1);
 fplot(f(x), [0, 4])
-% if interval is ommited, defaults to [5,5]
+
+%% if interval is ommited, defaults to [5,5]
 fplot(f(x))
 
 %% Exercise 2
@@ -29,7 +30,7 @@ syms x
 %% a
 solution = solve(x^2 == 4)
 pretty(solution)
-%%b
+%% b
 [sol2, params2, cond2] = solve(tan(x) == 1, x, 'ReturnConditions', true)
 
 pretty(sol2)

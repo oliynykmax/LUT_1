@@ -7,7 +7,8 @@ clc
 syms x
 f(x) = 1 / (x ^ 2 + 1);
 fplot(f(x), [0, 4])
-% if interval is ommited, defaults to [5,5]
+
+%% if interval is ommited, defaults to [5,5]
 fplot(f(x))
 
 %% Exercise 2
@@ -29,7 +30,7 @@ syms x
 %% a
 solution = solve(x^2 == 4)
 pretty(solution)
-%%b
+%% b
 [sol2, params2, cond2] = solve(tan(x) == 1, x, 'ReturnConditions', true)
 
 pretty(sol2)
@@ -99,6 +100,10 @@ clearvars
 close all
 clc
 
-syms k
-expr = (1/16^k) * ((4 / 8*k + 1) - (2 / *)
-p(n) = symum(1
+syms k n
+expr = (1/16^k) * ( 4/(8*k + 1) - 2/(8*k + 4) - 1/(8*k + 5) - 1/(8*k + 6) );
+p(n) = symsum(expr, k, 0, n);
+for i = 0:6
+    error = double(abs(pi - p(i)));
+    fprintf('n = %d: |pi - p(n)| = %.16f\n', i, error);
+end
