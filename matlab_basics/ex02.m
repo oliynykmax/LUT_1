@@ -1,3 +1,6 @@
+set(0,'DefaultFigureWindowStyle','docked')
+
+
 %% Exercise Set 2
 % Exercise 1
 clearvars
@@ -8,8 +11,8 @@ syms x
 f(x) = 1 / (x ^ 2 + 1);
 fplot(f(x), [0, 4])
 
-%% if interval is ommited, defaults to [5,5]
-fplot(f(x))
+%% if interval is ommited, defaults to [-5,5]
+fplot(f(x));
 
 %% Exercise 2
 clearvars
@@ -28,10 +31,10 @@ clc
 
 syms x
 %% a
-solution = solve(x^2 == 4)
-pretty(solution)
+solution = solve(x^2 == 4);
+pretty(solution);
 %% b
-[sol2, params2, cond2] = solve(tan(x) == 1, x, 'ReturnConditions', true)
+[sol2, ~, ~] = solve(tan(x) == 1, x, 'ReturnConditions', true);
 
 pretty(sol2)
 
@@ -46,7 +49,7 @@ syms x
 pretty(solve(x^2 < 4))
 
 % 0 doesn't look like a solution ???
-[sol2, params2, cond2] = solve(x^2 < 4, x, 'ReturnConditions', true)
+[sol2, params2, cond2] = solve(x^2 < 4, x, 'ReturnConditions', true);
 
 pretty(cond2)
 
@@ -57,14 +60,14 @@ syms x y
 eqn1 = y == x - 1;
 eqn2 = y == -x + 1;
 
-[A,B] = equationsToMatrix([eqn1,eqn2],[x,y])
-solution = linsolve(A, B)
+[A,B] = equationsToMatrix([eqn1,eqn2],[x,y]);
+pretty(linsolve(A, B))
 
 %% alternative
 syms x y
 eqns = [y == x - 1, y == -x + 1];
 sol = solve(eqns, [x, y]);
-result = [sol.x, sol.y]
+result = [sol.x, sol.y];
 disp(['Solution: [x, y] = [', char(result(1)), ', ', char(result(2)), ']'])
 
 %% Exercise 5
@@ -79,18 +82,18 @@ f = ((x + h) ^ 2 - x ^ 2) / h;
 limit(f, h, 0)
 
 %% b
-f = sin(x)
+f = sin(x);
 limit(f/x, x, 0)
 %% c
 syms k
 
-solution = symsum(1 / factorial(k), k, 0, 20)
-double(solution)
+solution = symsum(1 / factorial(k), k, 0, 20);
+double(solution);
 %% d
 syms k
 
-solution = symsum(1 / factorial(k), k, 0, Inf)
-double(solution)
+solution = symsum(1 / factorial(k), k, 0, Inf);
+double(solution);
 %% e
 syms k
 symprod(k^2, k, 1, 5)
