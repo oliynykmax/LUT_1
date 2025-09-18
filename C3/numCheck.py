@@ -1,7 +1,13 @@
 num = int(input())
 if num != 0:
-    print(
-        f"This is a {"negative" if num <= 0 else "positive"} {"odd" if num % 2 else "even"} number."
-    )
+    if num > 0:
+        sign = "positive"
+    else:
+        sign = "negative"
+    if num % 2 == 0:
+        parity = "even"
+    else:
+        parity = "odd"
+    print(f"This is a {sign} {parity} number.")
 else:
     print("This is zero, which is an even number.")
