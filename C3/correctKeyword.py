@@ -1,5 +1,5 @@
-print(
-    "Congratulations! You are the winner!"
-    if input() == "Lantern"
-    else "Sorry, better luck next time!"
-)
+keyword = input()
+if keyword == "Lantern":
+    print("Congratulations! You are the winner!")
+else:
+    print("Sorry, better luck next time!")
