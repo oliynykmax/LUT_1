@@ -34,7 +34,7 @@ syms x
 solution = solve(x^2 == 4);
 pretty(solution);
 %% b
-[sol2, ~, ~] = solve(tan(x) == 1, x, 'ReturnConditions', true);
+[sol2, ~ , ~] = solve(tan(x) == 1, x, 'ReturnConditions', true);
 
 pretty(sol2)
 
