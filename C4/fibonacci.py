@@ -1,3 +1,4 @@
+print("Enter how many Fibonacci numbers to print:")
 n = int(input())
 if n <= 0:
     print("You entered an invalid number.")
