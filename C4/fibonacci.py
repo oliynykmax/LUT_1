@@ -7,3 +7,4 @@ else:
     for _ in range(n):
         print(a)
         a, b = b, a + b
+
