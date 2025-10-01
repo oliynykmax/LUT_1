@@ -58,7 +58,7 @@ u = 500 * (1 + j/12 * 0.03) * S;
 
 sum_F = symsum(u, j, 1, 12); 
 disp(double(sum_F))
-%% Exercise Set 3
+%% Exercise Set 4
 % Exercise 2
 clearvars
 close all
@@ -181,10 +181,10 @@ I_exact = sin(1);
 n_values = [20, 40, 60, 80, 100];
 errors = zeros(size(n_values));
 
-for k = 1:length(n_values)
+for k = 1:5
     n = n_values(k);
     x = linspace(0, 1, n+1);      
-    y = f(x);       % f(x_j)
+    y = f(x);
    
     s_n = 0;
     for i = 1:n
